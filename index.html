@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Life-expectancy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="questions-container">
+
+        <div class="birthday">
+            <h1 class="birthday__question">When were you born?</h1>
+
+            <div class="birthday__date-picker date-picker">
+                <div class="date-picker__headline-container">
+                    <h2 class="date-picker__headline">DD/MM/YY</h2>
+                </div> 
+                
+                <div class="date-picker__selection">
+                    <div class="selection-container">
+                        <p class="date-picker-info">Select a day</p>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+        
+        <div class="location">
+            <h1 class="location__question">Are you from</h1>
+            <div class="location__picker">
+                <div class="location-message animation">Type in or choose from a list to change</div>
+                <input type="text" name="country" list="countryName" id="list-container" placeholder="Lithuanias" >
+                
+            </div>
+            <h1 class="location__question-questionmark">?</h1>
+        </div>
+            
+        <div class="arrow-container">
+            <!-- <p class='arrow-p'>W</p> -->
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <!-- salies rodymas pagal lokacija -->
+    <!-- informacijos sumetimas i userBirthday, pakeisti -->
+    <!-- Savaiciu apskaiciavimas, lokacijos ir av age parodymas -->
+    <div class="user-info">
+        <p>You are from <b id="country">Lithuania</b>. Average life expectancy in <b id="country2">Lithuania</b> is <b id="expectancy-years">???</b> years or <b id="expectancy-weeks">???</b> weeks. 
+        Your birthday is <b id="birthday">1996-06-29</b> and you have been alive for <b id="weeks-alive">1211</b> weeks.</p>
+        <p>Let me show you how your age compares to average life expectancy in <b id="country3">Lithuania</b>.</p>
+        <!-- <button class="visualisation">Click here</button> -->
+        <div id="circle-container" class="circle-container">
+        <button id="colorBtn">Click me</button>
+    </div>
+    </div>
+    <!-- <b class="userData"></b> -->
+    
+</body>
+<script type="text/javascript" src="script.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="sketch/libraries/p5.min.js"></script> 
+<script language="javascript" type="text/javascript" src="sketch/sketch.js"></script> -->
+</html>

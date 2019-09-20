@@ -1,0 +1,1216 @@
+{
+    "data": [
+        {
+            "name": "Hong Kong",
+            "total": 84.308,
+            "male": 81.37,
+            "female": 87.292
+        },
+        {
+            "name": "Macau",
+            "total": 84.188,
+            "male": 81.22,
+            "female": 87.12
+        },
+        {
+            "name": "Japan",
+            "total": 84.118,
+            "male": 80.87,
+            "female": 87.322
+        },
+        {
+            "name": "Switzerland",
+            "total": 83.706,
+            "male": 81.78,
+            "female": 85.54
+        },
+        {
+            "name": "Spain",
+            "total": 83.5,
+            "male": 80.748,
+            "female": 86.18
+        },
+        {
+            "name": "Singapore",
+            "total": 83.468,
+            "male": 81.444,
+            "female": 85.404
+        },
+        {
+            "name": "Italy",
+            "total": 83.416,
+            "male": 81.23,
+            "female": 85.506
+        },
+        {
+            "name": "Australia",
+            "total": 83.314,
+            "male": 81.478,
+            "female": 85.164
+        },
+        {
+            "name": "Iceland",
+            "total": 83.152,
+            "male": 81.762,
+            "female": 84.542
+        },
+        {
+            "name": "France",
+            "total": 82.946,
+            "male": 80.058,
+            "female": 85.814
+        },
+        {
+            "name": "Israel",
+            "total": 82.904,
+            "male": 81.238,
+            "female": 84.438
+        },
+        {
+            "name": "Sweden",
+            "total": 82.864,
+            "male": 81.224,
+            "female": 84.504
+        },
+        {
+            "name": "Canada",
+            "total": 82.782,
+            "male": 80.952,
+            "female": 84.568
+        },
+        {
+            "name": "South Korea",
+            "total": 82.626,
+            "male": 79.54,
+            "female": 85.526
+        },
+        {
+            "name": "Norway",
+            "total": 82.552,
+            "male": 80.744,
+            "female": 84.392
+        },
+        {
+            "name": "Martinique",
+            "total": 82.524,
+            "male": 79.394,
+            "female": 85.384
+        },
+        {
+            "name": "New Zealand",
+            "total": 82.268,
+            "male": 80.642,
+            "female": 83.854
+        },
+        {
+            "name": "Netherlands",
+            "total": 82.218,
+            "male": 80.526,
+            "female": 83.892
+        },
+        {
+            "name": "Luxembourg",
+            "total": 82.17,
+            "male": 80.056,
+            "female": 84.274
+        },
+        {
+            "name": "Austria",
+            "total": 82.036,
+            "male": 79.694,
+            "female": 84.316
+        },
+        {
+            "name": "United Kingdom",
+            "total": 81.932,
+            "male": 80.208,
+            "female": 83.608
+        },
+        {
+            "name": "Guadeloupe",
+            "total": 81.892,
+            "male": 78.46,
+            "female": 85.002
+        },
+        {
+            "name": "Ireland",
+            "total": 81.884,
+            "male": 79.98,
+            "female": 83.796
+        },
+        {
+            "name": "Finland",
+            "total": 81.75,
+            "male": 79.028,
+            "female": 84.486
+        },
+        {
+            "name": "Portugal",
+            "total": 81.716,
+            "male": 78.792,
+            "female": 84.436
+        },
+        {
+            "name": "Greece",
+            "total": 81.692,
+            "male": 79.25,
+            "female": 84.142
+        },
+        {
+            "name": "Belgium",
+            "total": 81.558,
+            "male": 79.234,
+            "female": 83.814
+        },
+        {
+            "name": "830",
+            "total": 81.476,
+            "male": 79.766,
+            "female": 83.124
+        },
+        {
+            "name": "Germany",
+            "total": 81.436,
+            "male": 79.166,
+            "female": 83.7
+        },
+        {
+            "name": "Slovenia",
+            "total": 81.322,
+            "male": 78.572,
+            "female": 84.064
+        },
+        {
+            "name": "Malta",
+            "total": 81.246,
+            "male": 79.666,
+            "female": 82.782
+        },
+        {
+            "name": "Denmark",
+            "total": 81.066,
+            "male": 79.198,
+            "female": 82.916
+        },
+        {
+            "name": "Cyprus",
+            "total": 80.906,
+            "male": 78.836,
+            "female": 82.97
+        },
+        {
+            "name": "Reunion",
+            "total": 80.802,
+            "male": 77.576,
+            "female": 83.91
+        },
+        {
+            "name": "Mayotte",
+            "total": 80.658,
+            "male": 77.578,
+            "female": 83.912
+        },
+        {
+            "name": "French Guiana",
+            "total": 80.48,
+            "male": 77.566,
+            "female": 83.548
+        },
+        {
+            "name": "Puerto Rico",
+            "total": 80.414,
+            "male": 76.63,
+            "female": 84.028
+        },
+        {
+            "name": "Taiwan",
+            "total": 80.374,
+            "male": 77.698,
+            "female": 83.152
+        },
+        {
+            "name": "Costa Rica",
+            "total": 80.328,
+            "male": 78.038,
+            "female": 82.672
+        },
+        {
+            "name": "Cuba",
+            "total": 80.2,
+            "male": 78.276,
+            "female": 82.162
+        },
+        {
+            "name": "United States Virgin Islands",
+            "total": 80.178,
+            "male": 77.862,
+            "female": 82.39
+        },
+        {
+            "name": "Chile",
+            "total": 80.048,
+            "male": 77.54,
+            "female": 82.364
+        },
+        {
+            "name": "Guam",
+            "total": 80.03,
+            "male": 77.688,
+            "female": 82.444
+        },
+        {
+            "name": "Lebanon",
+            "total": 80.006,
+            "male": 78.446,
+            "female": 81.798
+        },
+        {
+            "name": "United States",
+            "total": 79.772,
+            "male": 77.52,
+            "female": 82.004
+        },
+        {
+            "name": "Czech Republic",
+            "total": 79.084,
+            "male": 76.228,
+            "female": 81.906
+        },
+        {
+            "name": "CuraÃ§ao",
+            "total": 78.796,
+            "male": 75.678,
+            "female": 81.568
+        },
+        {
+            "name": "Albania",
+            "total": 78.694,
+            "male": 76.736,
+            "female": 80.792
+        },
+        {
+            "name": "Qatar",
+            "total": 78.56,
+            "male": 77.802,
+            "female": 80.252
+        },
+        {
+            "name": "Panama",
+            "total": 78.48,
+            "male": 75.626,
+            "female": 81.476
+        },
+        {
+            "name": "Maldives",
+            "total": 78.1,
+            "male": 77.16,
+            "female": 79.254
+        },
+        {
+            "name": "Croatia",
+            "total": 78.048,
+            "male": 74.796,
+            "female": 81.23
+        },
+        {
+            "name": "Poland",
+            "total": 77.986,
+            "male": 74.124,
+            "female": 81.78
+        },
+        {
+            "name": "Uruguay",
+            "total": 77.874,
+            "male": 74.314,
+            "female": 81.184
+        },
+        {
+            "name": "Estonia",
+            "total": 77.874,
+            "male": 73.242,
+            "female": 82.138
+        },
+        {
+            "name": "Brunei",
+            "total": 77.646,
+            "male": 76.058,
+            "female": 79.336
+        },
+        {
+            "name": "United Arab Emirates",
+            "total": 77.644,
+            "male": 76.946,
+            "female": 79.154
+        },
+        {
+            "name": "Oman",
+            "total": 77.594,
+            "male": 75.904,
+            "female": 80.014
+        },
+        {
+            "name": "Mexico",
+            "total": 77.59,
+            "male": 75.226,
+            "female": 79.962
+        },
+        {
+            "name": "Montenegro",
+            "total": 77.466,
+            "male": 75.108,
+            "female": 79.792
+        },
+        {
+            "name": "New Caledonia",
+            "total": 77.432,
+            "male": 74.858,
+            "female": 80.322
+        },
+        {
+            "name": "Bosnia and Herzegovina",
+            "total": 77.352,
+            "male": 74.838,
+            "female": 79.808
+        },
+        {
+            "name": "French Polynesia",
+            "total": 77.264,
+            "male": 75.134,
+            "female": 79.616
+        },
+        {
+            "name": "Bahrain",
+            "total": 77.244,
+            "male": 76.382,
+            "female": 78.362
+        },
+        {
+            "name": "Slovakia",
+            "total": 77.146,
+            "male": 73.644,
+            "female": 80.552
+        },
+        {
+            "name": "Argentina",
+            "total": 76.984,
+            "male": 73.25,
+            "female": 80.634
+        },
+        {
+            "name": "Ecuador",
+            "total": 76.88,
+            "male": 74.216,
+            "female": 79.632
+        },
+        {
+            "name": "Vietnam",
+            "total": 76.756,
+            "male": 72.124,
+            "female": 81.284
+        },
+        {
+            "name": "Antigua and Barbuda",
+            "total": 76.752,
+            "male": 74.238,
+            "female": 79.094
+        },
+        {
+            "name": "China",
+            "total": 76.64,
+            "male": 75.166,
+            "female": 78.238
+        },
+        {
+            "name": "Algeria",
+            "total": 76.598,
+            "male": 75.366,
+            "female": 77.882
+        },
+        {
+            "name": "Iran",
+            "total": 76.408,
+            "male": 75.272,
+            "female": 77.644
+        },
+        {
+            "name": "Morocco",
+            "total": 76.38,
+            "male": 75.146,
+            "female": 77.578
+        },
+        {
+            "name": "Turkey",
+            "total": 76.374,
+            "male": 73.138,
+            "female": 79.558
+        },
+        {
+            "name": "Barbados",
+            "total": 76.282,
+            "male": 73.838,
+            "female": 78.616
+        },
+        {
+            "name": "Jamaica",
+            "total": 76.272,
+            "male": 73.914,
+            "female": 78.696
+        },
+        {
+            "name": "Tunisia",
+            "total": 76.26,
+            "male": 74.22,
+            "female": 78.324
+        },
+        {
+            "name": "Aruba",
+            "total": 76.222,
+            "male": 73.702,
+            "female": 78.574
+        },
+        {
+            "name": "Hungary",
+            "total": 76.218,
+            "male": 72.648,
+            "female": 79.604
+        },
+        {
+            "name": "Macedonia",
+            "total": 76.07,
+            "male": 74.06,
+            "female": 78.128
+        },
+        {
+            "name": "Bahamas",
+            "total": 76.04,
+            "male": 72.988,
+            "female": 78.96
+        },
+        {
+            "name": "Brazil",
+            "total": 76.018,
+            "male": 72.438,
+            "female": 79.602
+        },
+        {
+            "name": "Nicaragua",
+            "total": 76,
+            "male": 72.974,
+            "female": 78.954
+        },
+        {
+            "name": "Saint Lucia",
+            "total": 75.992,
+            "male": 73.346,
+            "female": 78.698
+        },
+        {
+            "name": "Sri Lanka",
+            "total": 75.79,
+            "male": 72.432,
+            "female": 79.092
+        },
+        {
+            "name": "Thailand",
+            "total": 75.778,
+            "male": 72.126,
+            "female": 79.514
+        },
+        {
+            "name": "Romania",
+            "total": 75.74,
+            "male": 72.316,
+            "female": 79.194
+        },
+        {
+            "name": "Malaysia",
+            "total": 75.676,
+            "male": 73.526,
+            "female": 78.072
+        },
+        {
+            "name": "Peru",
+            "total": 75.568,
+            "male": 72.954,
+            "female": 78.23
+        },
+        {
+            "name": "Samoa",
+            "total": 75.55,
+            "male": 72.576,
+            "female": 78.758
+        },
+        {
+            "name": "Serbia",
+            "total": 75.514,
+            "male": 72.71,
+            "female": 78.346
+        },
+        {
+            "name": "Mauritius",
+            "total": 75.054,
+            "male": 71.644,
+            "female": 78.6
+        },
+        {
+            "name": "Bulgaria",
+            "total": 75.054,
+            "male": 71.676,
+            "female": 78.532
+        },
+        {
+            "name": "Armenia",
+            "total": 75.018,
+            "male": 71.662,
+            "female": 78.018
+        },
+        {
+            "name": "Venezuela",
+            "total": 75.002,
+            "male": 71.056,
+            "female": 79.158
+        },
+        {
+            "name": "Kuwait",
+            "total": 74.986,
+            "male": 74.052,
+            "female": 76.35
+        },
+        {
+            "name": "Saudi Arabia",
+            "total": 74.952,
+            "male": 73.65,
+            "female": 76.764
+        },
+        {
+            "name": "Lithuania",
+            "total": 74.928,
+            "male": 69.6,
+            "female": 80.092
+        },
+        {
+            "name": "Latvia",
+            "total": 74.876,
+            "male": 69.916,
+            "female": 79.532
+        },
+        {
+            "name": "Colombia",
+            "total": 74.828,
+            "male": 71.318,
+            "female": 78.424
+        },
+        {
+            "name": "Jordan",
+            "total": 74.688,
+            "male": 72.984,
+            "female": 76.488
+        },
+        {
+            "name": "Dominican Republic",
+            "total": 74.32,
+            "male": 71.272,
+            "female": 77.564
+        },
+        {
+            "name": "El Salvador",
+            "total": 74.092,
+            "male": 69.416,
+            "female": 78.428
+        },
+        {
+            "name": "Honduras",
+            "total": 74.066,
+            "male": 71.504,
+            "female": 76.64
+        },
+        {
+            "name": "Seychelles",
+            "total": 74.05,
+            "male": 69.794,
+            "female": 78.804
+        },
+        {
+            "name": "Guatemala",
+            "total": 73.988,
+            "male": 70.752,
+            "female": 77.164
+        },
+        {
+            "name": "Grenada",
+            "total": 73.95,
+            "male": 71.506,
+            "female": 76.472
+        },
+        {
+            "name": "Palestine",
+            "total": 73.898,
+            "male": 71.982,
+            "female": 75.92
+        },
+        {
+            "name": "Georgia",
+            "total": 73.714,
+            "male": 69.482,
+            "female": 77.878
+        },
+        {
+            "name": "Saint Vincent and the Grenadines",
+            "total": 73.46,
+            "male": 71.296,
+            "female": 75.746
+        },
+        {
+            "name": "Tonga",
+            "total": 73.408,
+            "male": 70.364,
+            "female": 76.446
+        },
+        {
+            "name": "Paraguay",
+            "total": 73.336,
+            "male": 71.19,
+            "female": 75.644
+        },
+        {
+            "name": "Cape Verde",
+            "total": 73.316,
+            "male": 71.148,
+            "female": 75.254
+        },
+        {
+            "name": "Bangladesh",
+            "total": 73.24,
+            "male": 71.612,
+            "female": 75.044
+        },
+        {
+            "name": "Belarus",
+            "total": 73.23,
+            "male": 67.728,
+            "female": 78.6
+        },
+        {
+            "name": "Vanuatu",
+            "total": 72.614,
+            "male": 70.47,
+            "female": 74.956
+        },
+        {
+            "name": "Libya",
+            "total": 72.398,
+            "male": 69.604,
+            "female": 75.408
+        },
+        {
+            "name": "Syria",
+            "total": 72.266,
+            "male": 67.314,
+            "female": 77.95
+        },
+        {
+            "name": "Ukraine",
+            "total": 72.262,
+            "male": 67.25,
+            "female": 77.106
+        },
+        {
+            "name": "Azerbaijan",
+            "total": 72.248,
+            "male": 69.164,
+            "female": 75.328
+        },
+        {
+            "name": "North Korea",
+            "total": 72.152,
+            "male": 68.514,
+            "female": 75.582
+        },
+        {
+            "name": "900",
+            "total": 72.148,
+            "male": 69.886,
+            "female": 74.49
+        },
+        {
+            "name": "Egypt",
+            "total": 71.916,
+            "male": 69.666,
+            "female": 74.27
+        },
+        {
+            "name": "Moldova",
+            "total": 71.828,
+            "male": 67.562,
+            "female": 76.082
+        },
+        {
+            "name": "Suriname",
+            "total": 71.686,
+            "male": 68.482,
+            "female": 75.05
+        },
+        {
+            "name": "Uzbekistan",
+            "total": 71.546,
+            "male": 68.726,
+            "female": 74.412
+        },
+        {
+            "name": "Tajikistan",
+            "total": 71.434,
+            "male": 68.6,
+            "female": 74.598
+        },
+        {
+            "name": "Solomon Islands",
+            "total": 71.378,
+            "male": 69.862,
+            "female": 73.034
+        },
+        {
+            "name": "Russia",
+            "total": 71.36,
+            "male": 65.774,
+            "female": 76.912
+        },
+        {
+            "name": "Kyrgyzstan",
+            "total": 71.198,
+            "male": 67.216,
+            "female": 75.276
+        },
+        {
+            "name": "Nepal",
+            "total": 71.066,
+            "male": 69.406,
+            "female": 72.738
+        },
+        {
+            "name": "Bhutan",
+            "total": 71.05,
+            "male": 70.674,
+            "female": 71.44
+        },
+        {
+            "name": "Trinidad and Tobago",
+            "total": 70.936,
+            "male": 67.482,
+            "female": 74.63
+        },
+        {
+            "name": "Belize",
+            "total": 70.898,
+            "male": 68.182,
+            "female": 73.94
+        },
+        {
+            "name": "Fiji",
+            "total": 70.626,
+            "male": 67.716,
+            "female": 73.878
+        },
+        {
+            "name": "Iraq",
+            "total": 70.284,
+            "male": 67.954,
+            "female": 72.646
+        },
+        {
+            "name": "Kazakhstan",
+            "total": 70.196,
+            "male": 65.372,
+            "female": 75.034
+        },
+        {
+            "name": "Western Sahara",
+            "total": 70.104,
+            "male": 68.458,
+            "female": 72.142
+        },
+        {
+            "name": "Bolivia",
+            "total": 69.928,
+            "male": 67.43,
+            "female": 72.542
+        },
+        {
+            "name": "Cambodia",
+            "total": 69.8,
+            "male": 67.536,
+            "female": 71.842
+        },
+        {
+            "name": "Mongolia",
+            "total": 69.69,
+            "male": 65.646,
+            "female": 73.956
+        },
+        {
+            "name": "Timor-Leste",
+            "total": 69.636,
+            "male": 67.842,
+            "female": 71.552
+        },
+        {
+            "name": "Indonesia",
+            "total": 69.586,
+            "male": 67.482,
+            "female": 71.83
+        },
+        {
+            "name": "Micronesia",
+            "total": 69.494,
+            "male": 68.264,
+            "female": 70.724
+        },
+        {
+            "name": "Philippines",
+            "total": 69.456,
+            "male": 66.132,
+            "female": 73.052
+        },
+        {
+            "name": "India",
+            "total": 69.118,
+            "male": 67.622,
+            "female": 70.762
+        },
+        {
+            "name": "Botswana",
+            "total": 68.43,
+            "male": 65.902,
+            "female": 70.82
+        },
+        {
+            "name": "Turkmenistan",
+            "total": 68.11,
+            "male": 64.626,
+            "female": 71.64
+        },
+        {
+            "name": "Senegal",
+            "total": 67.886,
+            "male": 65.79,
+            "female": 69.816
+        },
+        {
+            "name": "Rwanda",
+            "total": 67.848,
+            "male": 65.68,
+            "female": 69.976
+        },
+        {
+            "name": "Kenya",
+            "total": 67.522,
+            "male": 65.22,
+            "female": 69.824
+        },
+        {
+            "name": "Laos",
+            "total": 67.486,
+            "male": 65.872,
+            "female": 69.072
+        },
+        {
+            "name": "Tanzania",
+            "total": 66.978,
+            "male": 65.3,
+            "female": 68.636
+        },
+        {
+            "name": "Sao Tome and Principe",
+            "total": 66.962,
+            "male": 64.754,
+            "female": 69.132
+        },
+        {
+            "name": "Gabon",
+            "total": 66.948,
+            "male": 65.362,
+            "female": 68.64
+        },
+        {
+            "name": "Guyana",
+            "total": 66.94,
+            "male": 64.626,
+            "female": 69.402
+        },
+        {
+            "name": "Myanmar",
+            "total": 66.912,
+            "male": 64.506,
+            "female": 69.27
+        },
+        {
+            "name": "Madagascar",
+            "total": 66.834,
+            "male": 65.214,
+            "female": 68.466
+        },
+        {
+            "name": "Pakistan",
+            "total": 66.824,
+            "male": 65.786,
+            "female": 67.94
+        },
+        {
+            "name": "Kiribati",
+            "total": 66.79,
+            "male": 63.468,
+            "female": 70.124
+        },
+        {
+            "name": "Ethiopia",
+            "total": 66.366,
+            "male": 64.462,
+            "female": 68.298
+        },
+        {
+            "name": "Eritrea",
+            "total": 66.144,
+            "male": 63.974,
+            "female": 68.384
+        },
+        {
+            "name": "Papua New Guinea",
+            "total": 65.932,
+            "male": 63.486,
+            "female": 68.518
+        },
+        {
+            "name": "Republic of the Congo",
+            "total": 65.63,
+            "male": 63.996,
+            "female": 67.304
+        },
+        {
+            "name": "Yemen",
+            "total": 65.434,
+            "male": 63.942,
+            "female": 66.966
+        },
+        {
+            "name": "Namibia",
+            "total": 65.26,
+            "male": 62.272,
+            "female": 68.082
+        },
+        {
+            "name": "Sudan",
+            "total": 64.974,
+            "male": 63.33,
+            "female": 66.648
+        },
+        {
+            "name": "Afghanistan",
+            "total": 64.542,
+            "male": 63.23,
+            "female": 65.968
+        },
+        {
+            "name": "Comoros",
+            "total": 64.184,
+            "male": 62.454,
+            "female": 65.982
+        },
+        {
+            "name": "Malawi",
+            "total": 64.126,
+            "male": 61.52,
+            "female": 66.614
+        },
+        {
+            "name": "South Africa",
+            "total": 63.978,
+            "male": 60.484,
+            "female": 67.468
+        },
+        {
+            "name": "Haiti",
+            "total": 63.936,
+            "male": 61.73,
+            "female": 66.164
+        },
+        {
+            "name": "Liberia",
+            "total": 63.714,
+            "male": 62.666,
+            "female": 64.762
+        },
+        {
+            "name": "Mauritania",
+            "total": 63.576,
+            "male": 62.016,
+            "female": 65.158
+        },
+        {
+            "name": "Ghana",
+            "total": 63.444,
+            "male": 62.35,
+            "female": 64.508
+        },
+        {
+            "name": "Djibouti",
+            "total": 62.856,
+            "male": 61.186,
+            "female": 64.604
+        },
+        {
+            "name": "Zambia",
+            "total": 62.628,
+            "male": 59.882,
+            "female": 65.402
+        },
+        {
+            "name": "Angola",
+            "total": 62.106,
+            "male": 59.256,
+            "female": 64.986
+        },
+        {
+            "name": "Zimbabwe",
+            "total": 62.102,
+            "male": 60.114,
+            "female": 63.934
+        },
+        {
+            "name": "Gambia",
+            "total": 61.738,
+            "male": 60.354,
+            "female": 63.174
+        },
+        {
+            "name": "Benin",
+            "total": 61.53,
+            "male": 59.964,
+            "female": 63.08
+        },
+        {
+            "name": "Guinea",
+            "total": 61.486,
+            "male": 60.848,
+            "female": 62.106
+        },
+        {
+            "name": "Burkina Faso",
+            "total": 61.314,
+            "male": 60.478,
+            "female": 62.022
+        },
+        {
+            "name": "Niger",
+            "total": 60.902,
+            "male": 59.89,
+            "female": 62.004
+        },
+        {
+            "name": "Togo",
+            "total": 60.764,
+            "male": 59.882,
+            "female": 61.64
+        },
+        {
+            "name": "DR Congo",
+            "total": 60.616,
+            "male": 59.086,
+            "female": 62.164
+        },
+        {
+            "name": "Uganda",
+            "total": 60.59,
+            "male": 58.39,
+            "female": 62.764
+        },
+        {
+            "name": "Mozambique",
+            "total": 59.584,
+            "male": 57.384,
+            "female": 61.684
+        },
+        {
+            "name": "Cameroon",
+            "total": 59.314,
+            "male": 58.206,
+            "female": 60.436
+        },
+        {
+            "name": "Mali",
+            "total": 59.152,
+            "male": 58.368,
+            "female": 59.928
+        },
+        {
+            "name": "Swaziland",
+            "total": 58.764,
+            "male": 55.57,
+            "female": 61.672
+        },
+        {
+            "name": "Equatorial Guinea",
+            "total": 58.418,
+            "male": 57.168,
+            "female": 59.848
+        },
+        {
+            "name": "Burundi",
+            "total": 58.394,
+            "male": 56.41,
+            "female": 60.43
+        },
+        {
+            "name": "Guinea-Bissau",
+            "total": 58.392,
+            "male": 56.626,
+            "female": 60.152
+        },
+        {
+            "name": "South Sudan",
+            "total": 57.97,
+            "male": 56.898,
+            "female": 59.06
+        },
+        {
+            "name": "Somalia",
+            "total": 57.332,
+            "male": 55.664,
+            "female": 59.07
+        },
+        {
+            "name": "Lesotho",
+            "total": 55.106,
+            "male": 52.87,
+            "female": 57.1
+        },
+        {
+            "name": "Ivory Coast",
+            "total": 54.828,
+            "male": 53.392,
+            "female": 56.374
+        },
+        {
+            "name": "Nigeria",
+            "total": 54.542,
+            "male": 53.72,
+            "female": 55.394
+        },
+        {
+            "name": "Central African Republic",
+            "total": 53.836,
+            "male": 51.832,
+            "female": 55.864
+        },
+        {
+            "name": "Chad",
+            "total": 53.636,
+            "male": 52.4,
+            "female": 54.892
+        },
+        {
+            "name": "Sierra Leone",
+            "total": 52.706,
+            "male": 52.054,
+            "female": 53.366
+        }
+    ]
+}

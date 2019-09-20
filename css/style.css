@@ -1,0 +1,455 @@
+.circle-container .circle {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #959595;
+  border-radius: 50%;
+  margin: 1px;
+  display: inline-block;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.transitionHeight {
+  height: 250px !important;
+  transition: height 0.25s ease-in;
+}
+
+.transitionTop {
+  top: -60px !important;
+  transition: top 0.25s ease-in;
+}
+
+.transitionBack {
+  top: 0px !important;
+  transition: top 0.25s ease-in;
+}
+
+.placeholderColor::placeholder {
+  color: rgba(255, 82, 82, 0.8);
+}
+
+b {
+  color: rgba(255, 82, 82, 0.8);
+  font-weight: normal;
+}
+
+.arrow-container {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+.arrow-container .arrow-p {
+  line-height: 40px;
+  opacity: 0;
+  display: none;
+}
+.arrow-container:hover .arrow::before {
+  opacity: 1;
+  right: 5px;
+  top: 5px;
+}
+.arrow-container .arrow {
+  height: 17px;
+  width: 17px;
+  border: 5px solid rgba(255, 82, 82, 0.8);
+  border-bottom: none;
+  border-left: none;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  position: relative;
+  top: 55%;
+  cursor: pointer;
+}
+.arrow-container .arrow::before {
+  opacity: 0;
+  transition: all 0.25s ease-in;
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: 5px solid rgba(255, 82, 82, 0.3);
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f2f4;
+  font-family: "Muli", sans-serif;
+  font-size: 10px;
+}
+body .questions-container .birthday,
+body .questions-container .location {
+  display: inline-block;
+  margin-left: 350px;
+  margin-top: 30vh;
+  height: 40px;
+}
+body .questions-container .birthday__question, body .questions-container .birthday__question-questionmark,
+body .questions-container .location__question,
+body .questions-container .location__question-questionmark {
+  font-size: 2.5em;
+  display: inline-block;
+  line-height: 40px;
+  font-weight: 300;
+  margin-right: 50px;
+}
+body .questions-container .birthday .date-picker,
+body .questions-container .birthday .location__picker,
+body .questions-container .location .date-picker,
+body .questions-container .location .location__picker {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  top: 0;
+  margin-right: 20px;
+}
+body .questions-container .birthday .date-picker__headline-container, body .questions-container .birthday .date-picker-headline,
+body .questions-container .birthday .location__picker__headline-container,
+body .questions-container .birthday .location__picker-headline,
+body .questions-container .location .date-picker__headline-container,
+body .questions-container .location .date-picker-headline,
+body .questions-container .location .location__picker__headline-container,
+body .questions-container .location .location__picker-headline {
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: white;
+}
+body .questions-container .birthday .date-picker__headline-container h2, body .questions-container .birthday .date-picker-headline h2,
+body .questions-container .birthday .location__picker__headline-container h2,
+body .questions-container .birthday .location__picker-headline h2,
+body .questions-container .location .date-picker__headline-container h2,
+body .questions-container .location .date-picker-headline h2,
+body .questions-container .location .location__picker__headline-container h2,
+body .questions-container .location .location__picker-headline h2 {
+  font-weight: 300;
+  font-size: 2.3em;
+  text-align: center;
+  color: #898989;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+body .questions-container .birthday .date-picker__selection,
+body .questions-container .birthday .location__picker__selection,
+body .questions-container .location .date-picker__selection,
+body .questions-container .location .location__picker__selection {
+  border-radius: 10px;
+  z-index: -2;
+  position: absolute;
+  height: 0;
+  background-color: white;
+  width: 350px;
+  top: 45px;
+  transition: all 0.25s ease-in;
+  opacity: 100%;
+}
+body .questions-container .birthday .date-picker__selection::-webkit-scrollbar-track,
+body .questions-container .birthday .location__picker__selection::-webkit-scrollbar-track,
+body .questions-container .location .date-picker__selection::-webkit-scrollbar-track,
+body .questions-container .location .location__picker__selection::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.096);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+body .questions-container .birthday .date-picker__selection::-webkit-scrollbar,
+body .questions-container .birthday .location__picker__selection::-webkit-scrollbar,
+body .questions-container .location .date-picker__selection::-webkit-scrollbar,
+body .questions-container .location .location__picker__selection::-webkit-scrollbar {
+  width: 10px;
+}
+body .questions-container .birthday .date-picker__selection::-webkit-scrollbar-thumb,
+body .questions-container .birthday .location__picker__selection::-webkit-scrollbar-thumb,
+body .questions-container .location .date-picker__selection::-webkit-scrollbar-thumb,
+body .questions-container .location .location__picker__selection::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 82, 82, 0.8);
+}
+body .questions-container .birthday .date-picker__selection .selection-container,
+body .questions-container .birthday .location__picker__selection .selection-container,
+body .questions-container .location .date-picker__selection .selection-container,
+body .questions-container .location .location__picker__selection .selection-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 250px;
+}
+body .questions-container .birthday .date-picker__selection .selection-container::-webkit-scrollbar-track,
+body .questions-container .birthday .location__picker__selection .selection-container::-webkit-scrollbar-track,
+body .questions-container .location .date-picker__selection .selection-container::-webkit-scrollbar-track,
+body .questions-container .location .location__picker__selection .selection-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.096);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+body .questions-container .birthday .date-picker__selection .selection-container::-webkit-scrollbar,
+body .questions-container .birthday .location__picker__selection .selection-container::-webkit-scrollbar,
+body .questions-container .location .date-picker__selection .selection-container::-webkit-scrollbar,
+body .questions-container .location .location__picker__selection .selection-container::-webkit-scrollbar {
+  width: 10px;
+}
+body .questions-container .birthday .date-picker__selection .selection-container::-webkit-scrollbar-thumb,
+body .questions-container .birthday .location__picker__selection .selection-container::-webkit-scrollbar-thumb,
+body .questions-container .location .date-picker__selection .selection-container::-webkit-scrollbar-thumb,
+body .questions-container .location .location__picker__selection .selection-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 82, 82, 0.8);
+}
+body .questions-container .birthday .date-picker__selection .date-picker-info,
+body .questions-container .birthday .location__picker__selection .date-picker-info,
+body .questions-container .location .date-picker__selection .date-picker-info,
+body .questions-container .location .location__picker__selection .date-picker-info {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgba(255, 82, 82, 0.8);
+  padding-top: 10px;
+}
+body .questions-container .birthday .date-picker__selection .day,
+body .questions-container .birthday .location__picker__selection .day,
+body .questions-container .location .date-picker__selection .day,
+body .questions-container .location .location__picker__selection .day {
+  flex-basis: 14%;
+}
+body .questions-container .birthday .date-picker__selection .month,
+body .questions-container .birthday .location__picker__selection .month,
+body .questions-container .location .date-picker__selection .month,
+body .questions-container .location .location__picker__selection .month {
+  flex-basis: 33%;
+}
+body .questions-container .birthday .date-picker__selection .year,
+body .questions-container .birthday .location__picker__selection .year,
+body .questions-container .location .date-picker__selection .year,
+body .questions-container .location .location__picker__selection .year {
+  font-size: 1.8em;
+  flex-basis: 33%;
+  margin-top: 18px;
+}
+body .questions-container .birthday .date-picker__selection .day,
+body .questions-container .birthday .date-picker__selection .month,
+body .questions-container .birthday .date-picker__selection .year,
+body .questions-container .birthday .location__picker__selection .day,
+body .questions-container .birthday .location__picker__selection .month,
+body .questions-container .birthday .location__picker__selection .year,
+body .questions-container .location .date-picker__selection .day,
+body .questions-container .location .date-picker__selection .month,
+body .questions-container .location .date-picker__selection .year,
+body .questions-container .location .location__picker__selection .day,
+body .questions-container .location .location__picker__selection .month,
+body .questions-container .location .location__picker__selection .year {
+  text-align: center;
+  color: #898989;
+  font-size: 1.8em;
+  font-weight: 300;
+  flex-grow: 1;
+  position: relative;
+}
+body .questions-container .birthday .date-picker__selection .day:nth-last-child(3), body .questions-container .birthday .date-picker__selection .day:nth-last-child(2), body .questions-container .birthday .date-picker__selection .day:nth-last-child(1),
+body .questions-container .birthday .date-picker__selection .month:nth-last-child(3),
+body .questions-container .birthday .date-picker__selection .month:nth-last-child(2),
+body .questions-container .birthday .date-picker__selection .month:nth-last-child(1),
+body .questions-container .birthday .date-picker__selection .year:nth-last-child(3),
+body .questions-container .birthday .date-picker__selection .year:nth-last-child(2),
+body .questions-container .birthday .date-picker__selection .year:nth-last-child(1),
+body .questions-container .birthday .location__picker__selection .day:nth-last-child(3),
+body .questions-container .birthday .location__picker__selection .day:nth-last-child(2),
+body .questions-container .birthday .location__picker__selection .day:nth-last-child(1),
+body .questions-container .birthday .location__picker__selection .month:nth-last-child(3),
+body .questions-container .birthday .location__picker__selection .month:nth-last-child(2),
+body .questions-container .birthday .location__picker__selection .month:nth-last-child(1),
+body .questions-container .birthday .location__picker__selection .year:nth-last-child(3),
+body .questions-container .birthday .location__picker__selection .year:nth-last-child(2),
+body .questions-container .birthday .location__picker__selection .year:nth-last-child(1),
+body .questions-container .location .date-picker__selection .day:nth-last-child(3),
+body .questions-container .location .date-picker__selection .day:nth-last-child(2),
+body .questions-container .location .date-picker__selection .day:nth-last-child(1),
+body .questions-container .location .date-picker__selection .month:nth-last-child(3),
+body .questions-container .location .date-picker__selection .month:nth-last-child(2),
+body .questions-container .location .date-picker__selection .month:nth-last-child(1),
+body .questions-container .location .date-picker__selection .year:nth-last-child(3),
+body .questions-container .location .date-picker__selection .year:nth-last-child(2),
+body .questions-container .location .date-picker__selection .year:nth-last-child(1),
+body .questions-container .location .location__picker__selection .day:nth-last-child(3),
+body .questions-container .location .location__picker__selection .day:nth-last-child(2),
+body .questions-container .location .location__picker__selection .day:nth-last-child(1),
+body .questions-container .location .location__picker__selection .month:nth-last-child(3),
+body .questions-container .location .location__picker__selection .month:nth-last-child(2),
+body .questions-container .location .location__picker__selection .month:nth-last-child(1),
+body .questions-container .location .location__picker__selection .year:nth-last-child(3),
+body .questions-container .location .location__picker__selection .year:nth-last-child(2),
+body .questions-container .location .location__picker__selection .year:nth-last-child(1) {
+  flex-grow: 0;
+}
+body .questions-container .birthday .date-picker__selection .day:hover:before,
+body .questions-container .birthday .date-picker__selection .month:hover:before,
+body .questions-container .birthday .date-picker__selection .year:hover:before,
+body .questions-container .birthday .location__picker__selection .day:hover:before,
+body .questions-container .birthday .location__picker__selection .month:hover:before,
+body .questions-container .birthday .location__picker__selection .year:hover:before,
+body .questions-container .location .date-picker__selection .day:hover:before,
+body .questions-container .location .date-picker__selection .month:hover:before,
+body .questions-container .location .date-picker__selection .year:hover:before,
+body .questions-container .location .location__picker__selection .day:hover:before,
+body .questions-container .location .location__picker__selection .month:hover:before,
+body .questions-container .location .location__picker__selection .year:hover:before {
+  content: "";
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 82, 82, 0.3);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+body .questions-container .birthday .date-picker .location-message,
+body .questions-container .birthday .location__picker .location-message,
+body .questions-container .location .date-picker .location-message,
+body .questions-container .location .location__picker .location-message {
+  font-family: "Muli", sans-serif;
+  font-size: 10px;
+  position: absolute;
+  width: 350px;
+  text-align: center;
+  font-size: 1em;
+  top: -30px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: default;
+}
+body .questions-container .birthday .date-picker .animation,
+body .questions-container .birthday .location__picker .animation,
+body .questions-container .location .date-picker .animation,
+body .questions-container .location .location__picker .animation {
+  background: linear-gradient(90deg, #000, #F4F2F4 90%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  animation: 5s linear 1;
+  animation-name: animate;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+body .questions-container .birthday #list-container,
+body .questions-container .location #list-container {
+  font-family: "Muli", sans-serif;
+  font-size: 10px;
+  height: 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: white;
+  width: 350px;
+  font-weight: 300;
+  font-size: 2.3em;
+  text-align: center;
+  color: #898989;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+body .questions-container .birthday #list-container:focus,
+body .questions-container .location #list-container:focus {
+  outline: 0;
+  box-sizing: border-box;
+}
+body .questions-container .birthday #list-container::-webkit-calendar-picker-indicator,
+body .questions-container .location #list-container::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+  color: rgba(255, 82, 82, 0.8);
+}
+body .questions-container .birthday .arrow-container,
+body .questions-container .location .arrow-container {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+body .questions-container .birthday .arrow-container .arrow-p,
+body .questions-container .location .arrow-container .arrow-p {
+  line-height: 40px;
+  opacity: 0;
+  display: none;
+}
+body .questions-container .birthday .arrow-container:hover .arrow::before,
+body .questions-container .location .arrow-container:hover .arrow::before {
+  opacity: 1;
+  right: 5px;
+  top: 5px;
+}
+body .questions-container .birthday .arrow-container .arrow,
+body .questions-container .location .arrow-container .arrow {
+  height: 17px;
+  width: 17px;
+  border: 5px solid rgba(255, 82, 82, 0.8);
+  border-bottom: none;
+  border-left: none;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  position: relative;
+  top: 55%;
+  cursor: pointer;
+}
+body .questions-container .birthday .arrow-container .arrow::before,
+body .questions-container .location .arrow-container .arrow::before {
+  opacity: 0;
+  transition: all 0.25s ease-in;
+  content: "";
+  width: 17px;
+  height: 17px;
+  border: 5px solid rgba(255, 82, 82, 0.3);
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  box-sizing: border-box;
+}
+
+ul#ui-id-1 {
+  border-radius: 10px;
+  border: none;
+  max-height: 250px;
+  min-height: 45px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ul#ui-id-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.096);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+ul#ui-id-1::-webkit-scrollbar {
+  width: 10px;
+}
+ul#ui-id-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 82, 82, 0.8);
+}
+ul#ui-id-1 li {
+  font-family: "Muli", sans-serif;
+  font-size: 10px;
+  font-size: 1.4em;
+}
+ul#ui-id-1 .ui-menu-item .ui-menu-item-wrapper.ui-state-active {
+  background: rgba(255, 82, 82, 0.8);
+  color: rgba(255, 82, 82, 0.8);
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
