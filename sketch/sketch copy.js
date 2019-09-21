@@ -2,8 +2,26 @@
 // console.log(`is kito lapo ${userInfo.countryLifeExp}`); // metais, durnas skaicius
 // console.log(`${userInfo.weeksAlive}`);
 
+let weeksAlive = 384;
+let weeksTotalCountry = 3910;
+let stupid_weeks = weeksTotalCountry / 40;
+let pilniStulp = Math.floor(weeksTotalCountry / 40);
+let weeks_dec = (stupid_weeks - pilniStulp).toFixed(3);
+console.log(stupid_weeks, weeks_dec);
+let liekana = Math.floor(40 * weeks_dec);
+console.log(liekana);
+
+// let weeksAlive = 384;
+// let weeksTotalCountry = 2003;
+// console.log(weeksTotalCountry / 40);
+// let pilniStulp = Math.floor(weeksTotalCountry / 40);
+// console.log(pilniStulp);
+// let numm = ((weeksTotalCountry / 40) + "").split(".");
+// let liekana = Math.floor(40 * (numm[1]/100));
+// console.log(liekana);
+
 let circleWidth = 5;
-let gutter = 3;
+let gutter = 5;
 let xPos = circleWidth * 2 + gutter;
 
 function setup() {
@@ -14,46 +32,56 @@ function setup() {
 
 let x = 1;
 let y = 1;
-let eilSk = 40;
+let eilSk = 41;
 let loopCount = 0;
 
-// function myLoop() {
-  
-//   setTimeout(() => {
-//     circle(xPos * x, xPos * y, circleWidth);
-//     fill(255, 190, 211);
-//     y++;
-//     if (y % eilSk == 0) x++;
-//     if (y % eilSk == 0) y = 1;
-
-//     console.log(xPos);
-//     loopCount++;
-//     if (loopCount < 5000) myLoop();
-//   }, 5);
-// }
 
 let buttonDOM = document.getElementById('colorBtn');
-function draw() {
-  // console.log(buttonDOM);
-  
-  stroke(255, 190, 211);
 
-  for(let i = 1; i <= 32; i++) {
-        for (let j = 1; j <= 30; j++) {
-            circle(xPos * i, xPos * j, circleWidth);
-            noFill();
-            }
-          }
-          noLoop();
-          strokeWeight(1);
+function draw() {
+  stroke(255, 190, 211);
+  // stroke(255, 190, 211);
+  // stroke(255, 255, 200);
+
+  // i stulpeliai, j eilutes
+  for (let i=1; i <= pilniStulp; i++) {
+    for(let j = 1; j<= 40; j++) {
+      circle(xPos * i, xPos * j, circleWidth);
+      noFill();
+    }
+  }
+  // fill(255, 255, 200);
+  for (let i = 1; i<= liekana; i++) {
+    circle((pilniStulp + 1) * xPos, xPos * i, circleWidth);
+  }
+  noLoop();
+  strokeWeight(1);
       
       buttonDOM.addEventListener('click', myLoop);
     }
-    
+// function draw() {
+//   stroke(255, 190, 211);
+
+//   // i stulpeliai, j eilutes
+//   for(let i = 1; i <= 125; i++) {
+//         for (let j = 1; j <= 40; j++) {
+//             circle(xPos * i, xPos * j, circleWidth);
+//             noFill();
+//             // console.log(xPos * i);
+//             }
+//           }
+//           noLoop();
+//           strokeWeight(1);
+      
+//       buttonDOM.addEventListener('click', myLoop);
+//     }
+
+
   function myLoop() {
     
     setTimeout(() => {
-      fill(255, 190, 211);
+      // fill(255, 190, 211);
+      fill(255, 255, 200);
       noStroke();
       circle(xPos * x, xPos * y, circleWidth);
       y++;
@@ -61,7 +89,9 @@ function draw() {
       if (y % eilSk == 0) y = 1;
       
       loopCount++;
-      if (loopCount < 5000) myLoop();
+      
+      // if (loopCount < userInfo.weeksAlive) myLoop();
+      if (loopCount < weeksAlive) myLoop();
     }, 10);
   }
 

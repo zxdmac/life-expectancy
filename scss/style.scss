@@ -107,6 +107,7 @@ b {
 
 body {
     background-color: #f4f2f4;
+    overflow-y: hidden;
     // font-family: 'Raleway', sans-serif;
     @include font;
     .questions-container {
@@ -256,7 +257,7 @@ body {
                     background: linear-gradient(90deg, #000, #F4F2F4 90%);
                     background-repeat: no-repeat;
                     background-size: 200%;
-                    animation: 5s linear 1;
+                    animation: 2s linear 1;
                     animation-name: animate;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -297,6 +298,36 @@ body {
             }
             
         @include arrow;
+        }
+    }
+    .user-info {
+
+        &-message {
+            font-size: 1.5em;
+            line-height: 25px;
+            font-weight: 300;
+            text-align: justify;
+            padding-left: 2em;
+            padding-bottom: 0.5em;
+            padding-top: 1em;
+            
+            p, button#colorBtn {
+                margin-top: 10px;
+            }
+            button#colorBtn{
+                position: relative;
+                &::after {
+                    // content: url('../img/arrow-pointing-to-right.png');
+                    width: 20px;
+                    height: auto;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+            }}
+        }
+
+        .circle-container {
+            padding-left: 2.1em;
         }
     }
 }

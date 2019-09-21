@@ -227,13 +227,13 @@ function toggleArrowClass(currentBlock, nextBlock) {
 var requestLocation = new XMLHttpRequest();
     
 var locationData;
-var userLocation;
+var userLocationCode;
 requestLocation.open('GET', 'http://ip-api.com/json/', true)
 
 requestLocation.onload = function() {
     locationData = JSON.parse(this.response)
     if (requestLocation.status >= 200 && requestLocation.status < 400) {
-        userLocation = locationData.country;
+        userLocationCode = locationData.countryCode;
         displayUsersLocation();
     } else {
         console.log('error');
@@ -244,8 +244,16 @@ requestLocation.send();
 let locationPlaceholder = document.getElementsByName('country')[0];
 
 function displayUsersLocation() {
-    console.log(`location detection: ${userLocation}`);
-    locationPlaceholder.placeholder = userLocation;
+    countryCodeToName(userLocationCode);
+    locationPlaceholder.placeholder = userLocationCode;
+}
+
+async function countryCodeToName(countryCode) {
+    console.log(`location detection: ${userLocationCode}`);
+    const res = await fetch('https://restcountries.eu/rest/v2/alpha/'+countryCode);
+    const data = await res.json();
+    return data.name;
+    console.log(`COUNTRY CODE TO NAME :::: ${data.name}`);
 }
 
 // COUNTRIES
@@ -299,7 +307,7 @@ function consoleCountries() {
             select: function(event, ui) {
                 userInfo.location = ui.item.label;
                 arrowAnimation('location', 'user-info');
-                addAnimationScripts();
+                // addAnimationScripts();
             },
             minLength: 0,
             position: { my : "left top", at: "left bottom+5px" }
@@ -336,7 +344,7 @@ $('input').each(function() {
             userInfo.location = locationCap;
             console.log(userInfo.location);
             arrowAnimation('location', 'user-info');
-            addAnimationScripts();
+            // addAnimationScripts();
         } else {
             console.log('please type in a correct country name');
         }
@@ -369,7 +377,7 @@ let checkPlaceholder = setInterval(() => {
         if (valid) { 
             userInfo.location = locationPlaceholder.placeholder;
             arrowAnimation('location', 'user-info');
-            addAnimationScripts();
+            // addAnimationScripts();
             clearInterval(checkPlaceholder);
         }
     }
@@ -401,7 +409,7 @@ function addCountries() {
 }
 
 // USER INFO
-
+let userInfoDOMUpdated = false;
 function updateUserInfoDOM() {
     userInfo.fetchTotal();
     console.log('updateUserInfoDOM')
@@ -410,8 +418,7 @@ function updateUserInfoDOM() {
     document.getElementById('country3').innerHTML = userInfo.location;
     document.getElementById('birthday').innerHTML = `${userInfo.day}/${userInfo.month}/${userInfo.year}`;
     document.getElementById('weeks-alive').innerHTML = userInfo.weeksAlive;
-
-
+    userInfoDOMUpdated = true;
 }
 
 let yearsToWeeks = function(num) {
@@ -420,12 +427,18 @@ let yearsToWeeks = function(num) {
     return num[0];
 }
 
-function addAnimationScripts() {
+let DOMInterval = setInterval(() => {
+    if (userInfoDOMUpdated) {
+        addAnimationScripts();
+        clearInterval(DOMInterval);
+    }
+}, 100);
 
+function addAnimationScripts() {
     console.log('scriptai pridedami')
     setTimeout(() => {
         console.log('scriptai prideti')
         loadJS('sketch/libraries/p5.min.js', document.body);
         loadJS('sketch/sketch.js', document.body);
-    }, 5000);
+    }, 10);
 }

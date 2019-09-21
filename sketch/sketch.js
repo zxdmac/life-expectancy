@@ -2,16 +2,28 @@
 // console.log(`is kito lapo ${userInfo.countryLifeExp}`); // metais, durnas skaicius
 // console.log(`${userInfo.weeksAlive}`);
 
-let circleWidth = 5;
-let gutter = 3;
-let xPos = circleWidth * 2 + gutter;
+console.log('SKETCH JS');
+
+let weeksAliveX, weeksTotalCountryX, stupid_weeks, pilniStulp, weeks_dec, liekana;
 
 function setup() {
+  weeksAliveX = userInfo.weeksAlive;
+  weeksTotalCountryX = userInfo.lifeExpectancyWeeks;
+  stupid_weeks = weeksTotalCountryX / 40;
+  pilniStulp = Math.floor(weeksTotalCountryX / 40);
+  weeks_dec = (stupid_weeks - pilniStulp).toFixed(3);
+  console.log(stupid_weeks, weeks_dec);
+  liekana = Math.floor(40 * weeks_dec);
+  console.log(liekana);
+  
   background(255);
   let canvasCircles = createCanvas(2000, 800);
   canvasCircles.parent('circle-container'); 
 }
 
+let circleWidth = 5;
+let gutter = 4;
+let xPos = circleWidth * 2 + gutter;
 let x = 1;
 let y = 1;
 let eilSk = 41;
@@ -24,23 +36,29 @@ function draw() {
   stroke(255, 190, 211);
 
   // i stulpeliai, j eilutes
-  for(let i = 1; i <= 125; i++) {
-        for (let j = 1; j <= 40; j++) {
-            circle(xPos * i, xPos * j, circleWidth);
-            noFill();
-            // console.log(xPos * i);
-            }
-          }
-          noLoop();
-          strokeWeight(1);
-      
-      buttonDOM.addEventListener('click', myLoop);
+  for (let i=1; i <= pilniStulp; i++) {
+    for(let j = 1; j<= 40; j++) {
+      circle(xPos * i, xPos * j, circleWidth);
+      noFill();
     }
-    
+  }
+  // fill(255, 255, 200);
+  for (let i = 1; i<= liekana; i++) {
+    circle((pilniStulp + 1) * xPos, xPos * i, circleWidth);
+  }
+  noLoop();
+  strokeWeight(1);
+      
+  if (loopCount < weeksAliveX) {
+    buttonDOM.addEventListener('click', myLoop);
+  }
+}
+
   function myLoop() {
     
     setTimeout(() => {
-      fill(255, 190, 211);
+      // fill(255, 190, 211);
+      fill(255, 255, 200);
       noStroke();
       circle(xPos * x, xPos * y, circleWidth);
       y++;
@@ -50,7 +68,7 @@ function draw() {
       loopCount++;
       
       // if (loopCount < userInfo.weeksAlive) myLoop();
-      if (loopCount < 1211) myLoop();
+      if (loopCount < weeksAliveX) myLoop();
     }, 10);
   }
 
