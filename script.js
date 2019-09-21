@@ -228,32 +228,31 @@ var requestLocation = new XMLHttpRequest();
     
 var locationData;
 var userLocationCode;
+let userLocation;
 requestLocation.open('GET', 'http://ip-api.com/json/', true)
 
 requestLocation.onload = function() {
     locationData = JSON.parse(this.response)
     if (requestLocation.status >= 200 && requestLocation.status < 400) {
         userLocationCode = locationData.countryCode;
-        displayUsersLocation();
+        countryCodeToName(userLocationCode);
     } else {
         console.log('error');
     }
 }
 requestLocation.send();
 
-let locationPlaceholder = document.getElementsByName('country')[0];
 
-function displayUsersLocation() {
-    countryCodeToName(userLocationCode);
-    locationPlaceholder.placeholder = userLocationCode;
+let locationPlaceholder = document.getElementsByName('country')[0];
+function displayUsersLocation(name) {
+    locationPlaceholder.placeholder = name;
 }
 
 async function countryCodeToName(countryCode) {
     console.log(`location detection: ${userLocationCode}`);
     const res = await fetch('https://restcountries.eu/rest/v2/alpha/'+countryCode);
     const data = await res.json();
-    return data.name;
-    console.log(`COUNTRY CODE TO NAME :::: ${data.name}`);
+    displayUsersLocation(data.name);
 }
 
 // COUNTRIES
