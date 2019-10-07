@@ -22,6 +22,11 @@
   transition: top 0.25s ease-in;
 }
 
+.transitionDown {
+  top: 20px !important;
+  transition: top 0.25s ease-in;
+}
+
 .transitionBack {
   top: 0px !important;
   transition: top 0.25s ease-in;
@@ -41,6 +46,13 @@ b {
   height: 40px;
   width: 40px;
   position: relative;
+}
+@media (max-width: 1000px) {
+  .arrow-container {
+    margin: 100px auto 0;
+    transform: rotate(90deg);
+    transform-origin: right;
+  }
 }
 .arrow-container .arrow-p {
   line-height: 40px;
@@ -85,12 +97,32 @@ body {
   font-family: "Muli", sans-serif;
   font-size: 10px;
 }
+@media (max-width: 1000px) {
+  body {
+    overflow-y: auto;
+  }
+}
 body .questions-container .birthday,
 body .questions-container .location {
   display: inline-block;
   margin-left: 350px;
   margin-top: 30vh;
   height: 40px;
+}
+@media (max-width: 1300px) {
+  body .questions-container .birthday,
+body .questions-container .location {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1000px) {
+  body .questions-container .birthday,
+body .questions-container .location {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
 }
 body .questions-container .birthday__question, body .questions-container .birthday__question-questionmark,
 body .questions-container .location__question,
@@ -101,6 +133,14 @@ body .questions-container .location__question-questionmark {
   font-weight: 300;
   margin-right: 50px;
 }
+@media (max-width: 1000px) {
+  body .questions-container .birthday__question, body .questions-container .birthday__question-questionmark,
+body .questions-container .location__question,
+body .questions-container .location__question-questionmark {
+    margin: 0;
+    text-align: center;
+  }
+}
 body .questions-container .birthday .date-picker,
 body .questions-container .birthday .location__picker,
 body .questions-container .location .date-picker,
@@ -110,6 +150,14 @@ body .questions-container .location .location__picker {
   cursor: pointer;
   top: 0;
   margin-right: 20px;
+}
+@media (max-width: 1000px) {
+  body .questions-container .birthday .date-picker,
+body .questions-container .birthday .location__picker,
+body .questions-container .location .date-picker,
+body .questions-container .location .location__picker {
+    margin: 30px auto 0;
+  }
 }
 body .questions-container .birthday .date-picker__headline-container, body .questions-container .birthday .date-picker-headline,
 body .questions-container .birthday .location__picker__headline-container,
@@ -339,6 +387,14 @@ body .questions-container .location .location__picker .animation {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
+@media (max-width: 1000px) {
+  body .questions-container .birthday .date-picker .animation,
+body .questions-container .birthday .location__picker .animation,
+body .questions-container .location .date-picker .animation,
+body .questions-container .location .location__picker .animation {
+    top: -20px;
+  }
+}
 @keyframes animate {
   0% {
     background-position: 200%;
@@ -380,6 +436,14 @@ body .questions-container .location .arrow-container {
   width: 40px;
   position: relative;
 }
+@media (max-width: 1000px) {
+  body .questions-container .birthday .arrow-container,
+body .questions-container .location .arrow-container {
+    margin: 100px auto 0;
+    transform: rotate(90deg);
+    transform-origin: right;
+  }
+}
 body .questions-container .birthday .arrow-container .arrow-p,
 body .questions-container .location .arrow-container .arrow-p {
   line-height: 40px;
@@ -420,6 +484,9 @@ body .questions-container .location .arrow-container .arrow::before {
   right: 0;
   box-sizing: border-box;
 }
+body .user-info {
+  margin-top: 1.5em;
+}
 body .user-info-message {
   font-size: 1.5em;
   line-height: 25px;
@@ -427,13 +494,35 @@ body .user-info-message {
   text-align: justify;
   padding-left: 2em;
   padding-bottom: 0.5em;
-  padding-top: 1em;
+  padding-top: 0em;
+}
+@media (max-width: 1000px) {
+  body .user-info-message {
+    padding-left: 0;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 body .user-info-message p, body .user-info-message button#colorBtn {
   margin-top: 10px;
 }
 body .user-info-message button#colorBtn {
   position: relative;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: "Muli", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0.8em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  border: 0;
+  color: rgba(255, 82, 82, 0.8);
+  cursor: pointer;
 }
 body .user-info-message button#colorBtn::after {
   width: 20px;
@@ -442,10 +531,73 @@ body .user-info-message button#colorBtn::after {
   top: 0;
   left: 0;
 }
+body .user-info-message .circle-container canvas {
+  display: inline-block;
+}
+@media (max-width: 1000px) {
+  body .user-info-message .circle-container canvas {
+    margin: 0 auto;
+    display: block;
+  }
+}
 body .user-info .circle-container {
   padding-left: 2.1em;
 }
+@media (max-width: 1000px) {
+  body .user-info .circle-container {
+    padding-left: 0;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+body .user-info .outlived-message {
+  display: none;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+body .user-info .outlived-message__container {
+  position: absolute;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding-top: 4em;
+  border-radius: 15px;
+}
+body .user-info .outlived-message__container p {
+  color: #898989;
+  font-size: 1.8em;
+  font-weight: 300;
+  padding: 1em;
+  text-align: right;
+}
+body .user-info .outlived-message__container i {
+  top: 1em;
+  right: 1em;
+  position: absolute;
+  color: rgba(255, 82, 82, 0.8);
+  cursor: pointer;
+  font-size: 2em;
+}
+body .user-info .outlived-message__container i:hover {
+  animation: rotation 0.3s linear 1 alternate-reverse;
+}
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
 ul#ui-id-1 {
   border-radius: 10px;
   border: none;

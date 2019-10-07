@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Life-expectancy</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,26 +44,26 @@
         </div>
             
         <div class="arrow-container">
-            <!-- <p class='arrow-p'>W</p> -->
             <div class="arrow"></div>
         </div>
     </div>
 
-    <!-- salies rodymas pagal lokacija -->
-    <!-- informacijos sumetimas i userBirthday, pakeisti -->
-    <!-- Savaiciu apskaiciavimas, lokacijos ir av age parodymas -->
     <div class="user-info">
+        <div class="outlived-message">
+            <div class="outlived-message__container">
+                <i class="far fa-times-circle"></i>
+                <p>Whoah! Seems like you've already walked more years on this planet than most people will.</p>
+            </div>
+        </div>
         <div class="user-info-message">
             <p>You are from <b id="country">Lithuania</b>. Average life expectancy in <b id="country2">Lithuania</b> is <b id="expectancy-years">???</b> years or <b id="expectancy-weeks">???</b> weeks. </p>
             <p>Your birthday is <b id="birthday">1996-06-29</b> and you have been alive for <b id="weeks-alive">1211</b> weeks.</p>
             <p>Let me show you how your age compares to average life expectancy in <b id="country3">Lithuania</b>.</p>
-            <button id="colorBtn">Click me</button>
+            <button id="colorBtn">Click Here</button>
         </div>
-        <!-- <button class="visualisation">Click here</button> -->
         <div id="circle-container" class="circle-container">
     </div>
     </div>
-    <!-- <b class="userData"></b> -->
     
 </body>
 <script type="text/javascript" src="script.js"></script>

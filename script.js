@@ -26,14 +26,18 @@ function initialDisplayNone() {
 initialDisplayNone();
 
 displayBlock('birthday');
-// arrowAnimation('null', 'location');
-// 29-30 eilutes istrinti
-// let arrowDOM = document.getElementsByClassName('arrow-container')[0];
-// arrowDOM.classList.add(`location-arrow`);
 
 function displayBlock(block) {
     document.getElementsByClassName(block)[0].style.display = 'inline-block';
-
+    if (typeof window.innerWidth != 'undefined')
+    {
+        if (window.innerWidth <= 1000 && block !== 'user-info') {
+            document.getElementsByClassName(block)[0].style.display = 'flex';
+        }    
+        if (window.innerWidth <= 1000 && block === 'user-info') {
+            document.getElementsByClassName(block)[0].style.display = 'block';
+        }    
+    }
 }
 
 function hideBlock(block) {
@@ -44,7 +48,14 @@ function hideBlock(block) {
 datePickerDOM.addEventListener('mouseover', () => {
     if (daysAdded == false) {
     selectionDOM.classList.add('transitionHeight');
-    datePickerConteinerDOM.classList.add('transitionTop');
+    if (typeof window.innerWidth != 'undefined')
+    {
+        if (window.innerWidth <= 1000) {
+            datePickerConteinerDOM.classList.add('transitionDown');
+        } else {
+            datePickerConteinerDOM.classList.add('transitionTop');
+        } 
+    }
      setTimeout(() => {
                 datePickerInfoDOM.style.display = 'block';
                 displayDays();
@@ -72,8 +83,6 @@ let userInfo = {
         // 8.64e7 is a number of milliseconds in a day
         this.daysAlive = Math.floor((d1 - d0) / 8.64e7);
         this.weeksAlive = Math.floor(this.daysAlive / 7);
-        console.log(`this.daysAlive: ${this.daysAlive}`);
-        console.log(`this.weeksAlive: ${this.weeksAlive}`);
     },
     fetchTotal: async function () {
         console.log('async funcija eina');
@@ -85,15 +94,14 @@ let userInfo = {
         this.yearsToWeeks();
     },
     yearsToWeeks: function() {
-        // apskaičiuoja tik dalį. Dar reikia pridėti metus paverstus į savaites
         num = (this.lifeExpectancyYears + "").split(".");
         let years_int = num[0];
         let years_dec = num[1];
         let toDays = (years_dec/1000) * 365.2425;
         let toWeeks = toDays / 7;
         this.lifeExpectancyWeeks = Math.round(toWeeks + years_int * 52.178);
-        console.log(num, toDays, toWeeks);
         document.getElementById('expectancy-weeks').innerHTML = this.lifeExpectancyWeeks;
+        checkIfOutlived();
     }
 }
 
@@ -151,7 +159,6 @@ function displayYears() {
         document.getElementsByClassName('selection-container')[0].innerHTML += `<div class="year">${currentYear-i}</div>`;
     }
 
-    // document.getElementsByClassName('selection-container')[0].style.overflowY = 'scroll';
     document.getElementsByClassName('selection-container')[0].style.overflowY = 'auto';
     document.getElementsByClassName('selection-container')[0].style.alignContent = 'initial';
 
@@ -193,22 +200,23 @@ function birthdayComfirmation() {
 }
 
 function arrowAnimation(currentBlock, nextBlock) {
-    arrowDOM.style.display = 'inline-block';
+    if (window.innerWidth <= 1000) {
+        arrowDOM.style.display = 'block';
+    } else {
+        arrowDOM.style.display = 'inline-block';
+    } 
     arrowDOM.addEventListener('click', () => {
         toggleArrowClass(currentBlock, nextBlock);
         hideBlock(currentBlock);
         displayBlock(nextBlock);
+        if (nextBlock === 'user-info') {
+            updateUserInfoDOM();
+        }
     })
-    if (nextBlock === 'user-info') {
-        // userInfo.fetchTotal();
-        updateUserInfoDOM();
-    }
+
+    if (nextBlock === 'location') alternativeLocationQuestion();
 }
 var loadJS = function(url, location){
-    //url is URL of external file, implementationCode is the code
-    //to be called from the file, location is the location to 
-    //insert the <script> element
-
     var scriptTag = document.createElement('script');
     scriptTag.src = url;
 
@@ -220,6 +228,11 @@ function toggleArrowClass(currentBlock, nextBlock) {
     if (currentBlock) arrowDOM.classList.remove(`${currentBlock}-arrow`);
     if (nextBlock === false) nextBlock = 'birthday';
     arrowDOM.classList.add(`${nextBlock}-arrow`);
+}
+
+function alternativeLocationQuestion() {
+    document.getElementsByClassName('location__question-questionmark')[0].style.display = 'none';
+    document.getElementsByClassName('location__question')[0].innerHTML = 'You are from:'
 }
 
 // DETECT COUNTRY
@@ -320,7 +333,6 @@ let arrowLocationDOM = document.getElementsByClassName('arrow-location')[0];
 let locationInputVal = document.getElementById('list-container');
 let locationIndex;
 
-// sutvarkyti visus console.log ir komentarus
 // detects change on input element
 $('input').each(function() {
     var elem = $(this);
@@ -335,24 +347,26 @@ $('input').each(function() {
             elem.data('oldVal', elem.val());
             
             arrowDOM.style.display = 'none';
-            validElement = checkIfValid(this.value);
-        
-            if (validElement) {
-            let locationVal = this.value;
-            let locationCap = locationVal.charAt(0).toUpperCase() + locationVal.slice(1); 
-            userInfo.location = locationCap;
-            console.log(userInfo.location);
-            arrowAnimation('location', 'user-info');
-            // addAnimationScripts();
-        } else {
-            console.log('please type in a correct country name');
-        }
-        
-    }});
+            
+            let el;
+            if (checkIfValid(this.value)) {
+                validElement = this.value;
+                let locationVal = this.value;
+                let locationCap = locationVal.charAt(0).toUpperCase() + locationVal.slice(1); 
+                el = locationCap;
+            } else if (this.value === '' && checkIfValid(locationPlaceholder.placeholder)) {
+                el = locationPlaceholder.placeholder;
+            }
+            if (el !== '') {
+                userInfo.location = el;
+                arrowAnimation('location', 'user-info');
+            } else {
+                console.log('please type in a correct country name');
+            }
+}});
 });
 
 function checkIfValid(val) {
-    // userInfo.location = '';
     let validElement = false;
     // checks if val is ether in countriesArroror lowerCaseCountries;
     countriesArr.forEach((el) => {
@@ -369,14 +383,13 @@ function checkIfValid(val) {
 }
 
 let checkPlaceholder = setInterval(() => {
-    
+
     let el = document.getElementsByClassName('arrow-container')[0];
     if (el.classList.contains('location-arrow')) {
         let valid = checkIfValid(locationPlaceholder.placeholder);
         if (valid) { 
             userInfo.location = locationPlaceholder.placeholder;
             arrowAnimation('location', 'user-info');
-            // addAnimationScripts();
             clearInterval(checkPlaceholder);
         }
     }
@@ -399,9 +412,7 @@ function addCountries() {
         setTimeout(() => {
             for(let i = 0; i < countriesArr.length; i++) {
                 dataListOption.innerHTML += `<option value="${countriesArr[i]}">`;
-                // locationSelectionDOM.innerHTML += `<div class="country">${countriesArr[i]}</div>`;
             }
-            // locationSelectionDOM.style.overflowY = 'scroll';
             countriesNotAdded = false;
         }, 0);
     }
@@ -420,8 +431,18 @@ function updateUserInfoDOM() {
     userInfoDOMUpdated = true;
 }
 
+function checkIfOutlived() {
+    let outlivedDOM = document.getElementsByClassName('outlived-message')[0];
+    if (userInfo.weeksAlive > userInfo.lifeExpectancyWeeks ) {
+        outlivedDOM.style.display = 'block';
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    }
+    let outlivedClose = document.getElementsByClassName('fa-times-circle')[0];
+    outlivedClose.addEventListener('click', () => {
+        outlivedDOM.style.display = 'none';
+    });
+}
 let yearsToWeeks = function(num) {
-    // let num = userInfo.countryLifeExp;
     num = (num + "").split(".");
     return num[0];
 }
